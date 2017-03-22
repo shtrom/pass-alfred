@@ -15,13 +15,13 @@ on runSimple(command)
 	if application "Terminal" is running then
 		tell application "Terminal"
 			activate
-        do script (command)
+			do script (command)
 		end tell
 	else
 		tell application "Terminal"
 			activate
-      close the front window
 			do script (command)
+			close the front window
 		end tell
 	end if
 end runSimple
